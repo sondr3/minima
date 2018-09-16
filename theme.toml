@@ -1,0 +1,14 @@
+name = "Minima"
+description = "A fork of the default Jekyll theme"
+license = "MIT"
+homepage = "https://github.com/sondr3/minima"
+min_version = "0.4.0"
+
+[author]
+name = "sondr3"
+htompage = "https://www.eons.io"
+
+[original]
+author = "Parker Moore"
+homepage = "https://jekyll.github.io/minima/"
+repo = "https://github.com/jekyll/minima"
