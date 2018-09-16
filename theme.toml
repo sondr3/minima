@@ -12,3 +12,8 @@ htompage = "https://www.eons.io"
 author = "Parker Moore"
 homepage = "https://jekyll.github.io/minima/"
 repo = "https://github.com/jekyll/minima"
+
+[extra]
+author_name = ""
+author_email = ""
+minima_links = []
