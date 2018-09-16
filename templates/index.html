@@ -44,16 +44,17 @@
     <div class="wrapper">
         {% block content %}
         <div class="home">
-            {% for page in section.pages | reverse %}
             <h2 class="post-list-heading">Posts</h2>
             <ul class="post-list">
+            {% for page in section.pages %}
                 <li><span class="post-meta">{{ page.date | date(format="%b %-d, %Y") }}</span>
                     <h3><a href="{{ page.permalink }}" class="post-link">
                         {{ page.title }}
                     </a></h3>
+                    {{ page.summary | safe }}
                 </li>
-            </ul>
             {% endfor %}
+            </ul>
         </div>
         {% endblock content %}
     </div>
