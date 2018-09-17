@@ -17,4 +17,20 @@ repo = "https://github.com/jekyll/minima"
 minima_show_excerpts = false
 minima_author_name = ""
 minima_author_email = ""
-minima_minima_links = []
+minima_minima_links = [
+    # {url = "/about/", name = "About"}
+]
+
+minima_twitter_username = ""
+minima_github_username =  ""
+minima_dribbble_username = ""
+minima_facebook_username = ""
+minima_flickr_username = ""
+minima_instagram_username = ""
+minima_linkedin_username = ""
+minima_pinterest_username = ""
+minima_youtube_username = ""
+minima_googleplus_username = ""
+minima_mastodon = [
+    # {username = "", instance = ""}
+]

@@ -12,6 +12,9 @@
     {% if config.generate_rss %}
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
     {% endif %}
+
+    {% block minima_head %}
+    {% endblock minima_head %}
 </head>
 <body>
 <header class="site-header" role="banner">
@@ -88,7 +91,20 @@
             </div>
 
             <div class="footer-col footer-col-2">
-                <!--- include "social.html" --->
+                <ul class="social-media-list">
+                    {%- if config.extra.minima_dribbble_username -%}<li><a href="https://dribbble.com/{{ config.extra.minima_dribbble_username | escape }}"><svg class="svg-icon"><use xlink:href="{{ get_url(path="/assets/minima-social-icons.svg#dribbble", trailing_slash=false) }}"></use></svg> <span class="username">{{ config.extra.minima_dribbble_username | escape }}</span></a></li>{%- endif -%}
+                    {%- if config.extra.minima_facebook_username -%}<li><a href="https://www.facebook.com/{{ config.extra.minima_facebook_username | escape }}"><svg class="svg-icon"><use xlink:href="{{ get_url(path="/assets/minima-social-icons.svg#facebook", trailing_slash=false) }}"></use></svg> <span class="username">{{ config.extra.minima_facebook_username | escape }}</span></a></li>{%- endif -%}
+                    {%- if config.extra.minima_flickr_username -%}<li><a href="https://www.flickr.com/photos/{{ config.extra.minima_flickr_username | escape }}"><svg class="svg-icon"><use xlink:href="{{ get_url(path="/assets/minima-social-icons.svg#flickr", trailing_slash=false) }}"></use></svg> <span class="username">{{ config.extra.minima_flickr_username | escape }}</span></a></li>{%- endif -%}
+                    {%- if config.extra.minima_github_username -%}<li><a href="https://github.com/{{ config.extra.minima_github_username | escape }}"><svg class="svg-icon"><use xlink:href="{{ get_url(path="/assets/minima-social-icons.svg#github", trailing_slash=false) }}"></use></svg> <span class="username">{{ config.extra.minima_github_username | escape }}</span></a></li>{%- endif -%}
+                    {%- if config.extra.minima_instagram_username -%}<li><a href="https://www.instagram.com/{{ config.extra.minima_instagram_username | escape }}"><svg class="svg-icon"><use xlink:href="{{ get_url(path="/assets/minima-social-icons.svg#instagram", trailing_slash=false) }}"></use></svg> <span class="username">{{ config.extra.minima_instagram_username | escape }}</span></a></li>{%- endif -%}
+                    {%- if config.extra.minima_linkedin_username -%}<li><a href="https://www.linkedin.com/in/{{ config.extra.minima_linkedin_username | escape }}"><svg class="svg-icon"><use xlink:href="{{ get_url(path="/assets/minima-social-icons.svg#linkedin", trailing_slash=false) }}"></use></svg> <span class="username">{{ config.extra.minima_linkedin_username | escape }}</span></a></li>{%- endif -%}
+                    {%- if config.extra.minima_pinterest_username -%}<li><a href="https://www.pinterest.com/{{ config.extra.minima_pinterest_username | escape }}"><svg class="svg-icon"><use xlink:href="{{ get_url(path="/assets/minima-social-icons.svg#pinterest", trailing_slash=false) }}"></use></svg> <span class="username">{{ config.extra.minima_pinterest_username | escape }}</span></a></li>{%- endif -%}
+                    {%- for mst in config.extra.minima_mastodon -%}{%- if mst.username and mst.instance -%}<li><a href="https://{{ mst.instance | escape}}/@{{mst.username}}"><svg class="svg-icon"><use xlink:href="{{ get_url(path="/assets/minima-social-icons.svg#mastodon", trailing_slash=false) }}"></use></svg> <span class="username">{{ mst.username | escape }}</span></a></li>{%- endif -%}{%- endfor -%}
+                    {%- if config.extra.minima_twitter_username -%}<li><a href="https://twitter.com/{{ config.extra.minima_twitter_username | escape }}"><svg class="svg-icon"><use xlink:href="{{ get_url(path="/assets/minima-social-icons.svg#twitter", trailing_slash=false) }}"></use></svg> <span class="username">{{ config.extra.minima_twitter_username | escape }}</span></a></li>{%- endif -%}
+                    {%- if config.extra.minima_youtube_username -%}<li><a href="https://www.youtube.com/{{ config.extra.minima_youtube_username | escape }}"><svg class="svg-icon"><use xlink:href="{{ get_url(path="/assets/minima-social-icons.svg#youtube", trailing_slash=false) }}"></use></svg> <span class="username">{{ config.extra.minima_youtube_username | escape }}</span></a></li>{%- endif -%}
+                    {%- if config.extra.minima_googleplus_username -%}<li><a href="https://plus.google.com/{{ config.extra.minima_googleplus_username | escape }}"><svg class="svg-icon"><use xlink:href="{{ get_url(path="/assets/minima-social-icons.svg#googleplus", trailing_slash=false) }}"></use></svg> <span class="username">{{ config.extra.minima_googleplus_username | escape }}</span></a></li>{%- endif -%}
+                    {%- if config.generate_rss -%}<li><a href="{{ get_url(path="rss.xml", trailing_slash=false) }}"><svg class="svg-icon"><use xlink:href="{{ get_url(path="/assets/minima-social-icons.svg#rss", trailing_slash=false) }}"></use></svg> <span>rss</span></a></li>{%- endif -%}
+                </ul>
             </div>
 
             <div class="footer-col footer-col-3">

@@ -19,3 +19,17 @@ minima_author_email = "user@user.com"
 minima_links = [
     {url = "/about/", title = "About"}
 ]
+
+minima_twitter_username = "sondr3"
+minima_github_username =  "sondr3"
+minima_dribbble_username = "sondr3"
+minima_facebook_username = "sondr3"
+minima_flickr_username = "sondr3"
+minima_instagram_username = "sondr3"
+minima_linkedin_username = "sondr3"
+minima_pinterest_username = "sondr3"
+minima_youtube_username = "sondr3"
+minima_googleplus_username = "sondr3"
+minima_mastodon = [
+    {username = "sondr3", instance = "fosstodon.org"}
+]
