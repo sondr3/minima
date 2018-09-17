@@ -13,7 +13,7 @@ taxonomies = [
 ]
 
 [extra]
-minima_show_excerpts = true
+minima_show_excerpts = false
 minima_author_name = "User Userson"
 minima_author_email = "user@user.com"
 minima_links = [
