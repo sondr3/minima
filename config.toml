@@ -13,8 +13,9 @@ taxonomies = [
 ]
 
 [extra]
-author_name = "User Userson"
-author_email = "user@user.com"
+minima_show_excerpts = true
+minima_author_name = "User Userson"
+minima_author_email = "user@user.com"
 minima_links = [
     {url = "/about/", title = "About"}
 ]

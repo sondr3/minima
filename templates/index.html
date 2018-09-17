@@ -51,7 +51,9 @@
                     <h3><a href="{{ page.permalink }}" class="post-link">
                         {{ page.title }}
                     </a></h3>
+                    {%- if config.extra.minima_show_excerpts -%}
                     {{ page.summary | safe }}
+                    {%- endif -%}
                 </li>
             {% endfor %}
             </ul>
@@ -71,14 +73,14 @@
             <div class="footer-col footer-col-1">
                 <ul class="contact-list">
                     <li class="p-name">
-                        {%- if config.extra.author_name -%}
-                        {{ config.extra.author_name }}
+                        {%- if config.extra.minima_author_name -%}
+                        {{ config.extra.minima_author_name }}
                         {%- else -%}
                         {{ config.title }}
                         {%- endif -%}
                     </li>
-                    {%- if config.extra.author_email -%}
-                    <li><a class="u-email" href="mailto:{{ config.extra.author_email }}">{{ config.extra.author_email }}</a></li>
+                    {%- if config.extra.minima_author_email -%}
+                    <li><a class="u-email" href="mailto:{{ config.extra.minima_author_email }}">{{ config.extra.minima_author_email }}</a></li>
                     {%- endif -%}
                 </ul>
             </div>
